@@ -65,19 +65,35 @@ const autenticar = (request, response, next) => {
   
 
 
-  router.get('', autenticarAdmin, controller.getAll)
-  router.post('/admin', autenticarAdmin, controller.addAdmin)
-  router.post('', autenticarAdmin, controller.add)
-  router.get('/:id', autenticar, controller.getById)
-  router.patch('/:id', autenticarAdmin, controller.update)
-  router.delete('/:id', autenticarAdmin, controller.remove)
-  router.post('/login', controller.login)
-  //Rotas para vagas
-  router.post('/:responsavelId/vagas', autenticar, controller.addVaga)
-  router.get('/:responsavelId/vagas', autenticar, controller.getVagas)
-  router.get('/:responsavelId/vagas/:vagaId', autenticar, controller.getVagaById)
-  router.patch('/:responsavelId/vagas/:vagaId', autenticarAdmin, controller.updateVaga)
-  router.delete('/:responsavelId/vagas/:vagaId', autenticarAdmin, controller.removeVaga)
+//Rotas administrador
+
+//Consultar todos gestores e vagas
+router.get('', autenticarAdmin, controller.getAll)
+//Cadastrar Admin
+router.post('/admin', autenticarAdmin, controller.addAdmin)
+//Cadastrar usuario comun
+router.post('', autenticarAdmin, controller.add)
+//Atualizar usuario
+router.patch('/:id', autenticarAdmin, controller.update)
+//Deletar usuario
+router.delete('/:id', autenticarAdmin, controller.remove)
+//Atualizar vaga
+router.patch('/:responsavelId/vagas/:vagaId', autenticarAdmin, controller.updateVaga)
+//Deletar vaga
+router.delete('/:responsavelId/vagas/:vagaId', autenticarAdmin, controller.removeVaga)
+
+//Rotas usuario comum
+
+//Logar
+router.post('/login', controller.login)
+//Cadastrar vagas
+router.post('/:responsavelId/vagas', autenticar, controller.addVaga)
+//Consultar vagas
+router.get('/:responsavelId/vagas', autenticar, controller.getVagas)
+//Consultar vaga por id
+router.get('/:responsavelId/vagas/:vagaId', autenticar, controller.getVagaById)
+
+
 
 
 
