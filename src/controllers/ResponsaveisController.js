@@ -82,7 +82,7 @@ const login = async (request, response) => {
         grupo: responsavelEncontrado.grupo
       },
       SEGREDO,
-      { expiresIn: 20000}
+      { expiresIn: 200000}
     )
     return response.status(200).send({ token })
   }

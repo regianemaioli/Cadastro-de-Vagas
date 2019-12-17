@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express()
-const responsaveis = require('./routes/responsaveis')
+const responsaveis = require('./src/routes/responsaveis')
 const PORT = 3001
 
 app.use(cors())
