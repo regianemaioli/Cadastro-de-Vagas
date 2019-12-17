@@ -16,10 +16,10 @@ Projeto final realizado no curso de backend do {reprograma}, onde desenvolvi uma
 - JWT e Bcrypt
 
 ### Istalação:
-git clone https://github.com/regianemaioli/Cadastro-de-Vagas.git
-cd projeto-final
-npm install
-npm start
+- git clone https://github.com/regianemaioli/Cadastro-de-Vagas.git
+- cd projeto-final
+- npm install
+- npm start
 
 ### Rotas/retornos:
 
