@@ -6,18 +6,15 @@ Projeto final realizado no curso de backend do {reprograma}, onde desenvolvi uma
 ### Tecnologias e ferramentas utilizadas na criação do projeto:
 - Javascript
 - Node
-- Visual Code
-- Postman
+- Visual Studio Code
 - Git e Github
 - Express
 - Nodemon
 - MongoDB e Mongoose
-- Heroku
 - JWT e Bcrypt
 
 ### Istalação:
 - git clone https://github.com/regianemaioli/Cadastro-de-Vagas.git
-- cd projeto-final
 - npm install
 - npm start
 
